@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+        <style>
+                body {
+                        margin: 0;
+                        font-family: 'Arial', sans-serif;
+                        background-image: url('your-background-image.jpg');
+                        /* Replace with your image path */
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+
+                        align-items: center;
+                        height: 100vh;
+                        color: #ffffff;
+                        text-align: center;
+                        position: relative;
+                        /* Added for logo positioning */
+                }
+
+                .logo {
+                        font-size: 72px;
+                        /* Large font size */
+                        font-weight: bold;
+                        /* Bold text */
+                        color: #ffcc00;
+                        /* Bright yellow for visibility */
+                        text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+                        /* Shadow for depth */
+                        position: absolute;
+                        /* Position it as needed */
+                        top: 20px;
+                        /* Adjust positioning */
+                        left: 20px;
+                        /* Adjust positioning */
+                        transform: rotate(-10deg);
+                        /* Slight rotation for style */
+                }
+
+                .content {
+                        background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(20, 20, 20, 0.9));
+                        /* Gradient background */
+                        padding: 40px;
+                        /* Increased padding for a spacious feel */
+                        border-radius: 15px;
+                        /* Rounded corners */
+                        max-width: 600px;
+                        /* Set a max width for the box */
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+                        /* Stronger shadow for depth */
+                        backdrop-filter: blur(15px);
+                        /* Blurred background for a glass effect */
+                        border: 2px solid rgba(255, 255, 255, 0.3);
+                        /* Subtle white border */
+                }
+
+                h1 {
+                        font-size: 48px;
+                        /* Increased font size */
+                        margin-bottom: 20px;
+                        color: #ffcc00;
+                        /* Bright yellow for visibility */
+                        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+                        /* Shadow for a 3D effect */
+                        letter-spacing: 3px;
+                        /* Increased spacing for style */
+                        font-family: 'Georgia', serif;
+                        /* Change font family for elegance */
+                        text-transform: uppercase;
+                        /* Uppercase letters for emphasis */
+                        border-bottom: 3px solid #ff5722;
+                        /* Decorative bottom border */
+                        padding-bottom: 10px;
+                        /* Spacing below the title */
+                }
+
+                .button-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        /* Space between buttons */
+                        margin: 20px 0;
+                        /* Vertical margin */
+                }
+
+                button {
+                        padding: 12px 30px;
+                        /* Button padding */
+                        font-size: 16px;
+                        /* Button font size */
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        background-color: #ff5722;
+                        /* Button color */
+                        color: white;
+                        transition: background-color 0.3s, transform 0.2s;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                        /* Subtle shadow */
+                }
+
+                button:hover {
+                        background-color: #e64a19;
+                        /* Darker shade on hover */
+                        transform: translateY(-2px);
+                        /* Lift effect */
+                }
+
+                .about-content {
+                        display: none;
+                        font-size: 16px;
+                        /* Increased font size for readability */
+                        line-height: 1.6;
+                        /* Spacing for legibility */
+                        color: #ddd;
+                        padding-top: 15px;
+                        /* Padding on top for separation */
+                        border-top: 1px solid #555;
+                        /* Separator line */
+                        margin-top: 20px;
+                        text-align: left;
+                }
+
+                .games-section {
+                        display: none;
+                        /* Hide initially */
+                        background: rgba(0, 0, 0, 0.8);
+                        /* Dark background */
+                        padding: 40px;
+                        /* Spacing */
+                        border-radius: 15px;
+                        /* Rounded corners */
+                        max-width: 800px;
+                        /* Max width */
+                        margin: 20px auto;
+                        /* Centered */
+                        color: #fff;
+                        /* Text color */
+                }
+
+                h2 {
+                        text-align: center;
+                        color: #ffcc00;
+                        /* Logo color */
+                }
+
+                .game-card {
+                        background: rgba(50, 50, 50, 0.9);
+                        /* Card background */
+                        margin: 15px;
+                        /* Margin around cards */
+                        padding: 20px;
+                        /* Padding inside cards */
+                        border-radius: 10px;
+                        /* Rounded corners */
+                        text-align: center;
+                        /* Centered text */
+                        transition: transform 0.3s;
+                        /* Hover effect */
+                }
+
+                .game-card:hover {
+                        transform: translateY(-5px);
+                        /* Lift effect on hover */
+                }
+        </style>
+</head>
+
+<body>
+
+        <div class="logo">AHN</div>
+        <div class="content">
+                <h1>AHN Mind Games<center></h1><center>
+
+                <div class="button-container">
+                        <button onclick="toggleAbout()">About</button>
+                        <button onclick="toggleGames()">Games</button>
+                </div>
+
+                <div class="about-content">
+                        <p> Aarnav loves solving puzzles and designing challenging games that make you think deeply. He
+                                brings creativity and innovation to our team, always looking for new ways to engage
+                                players.</p>
+                        <p>Nehaj is our coding expert, responsible for bringing our ideas to life with code. He has a
+                                keen eye for detail and ensures every game runs smoothly and looks visually appealing.
+                        </p>
+                        <p>Hanan is the storyteller of our group, making sure each game has a purpose and feels fun and
+                                meaningful. He designs the rules and makes sure everyone enjoys playing!</p>
+                        <p>We created AHN MIND GAMES as part of the <strong>Digital Fest</strong>, an exciting event
+                                where young coders showcase their skills in technology, design, and creativity. Our
+                                games are designed to entertain and educate, helping players improve their memory,
+                                logic, and problem-solving skills while having fun.</p>
+                        <p>We hope you enjoy playing our games as much as we enjoyed creating them. Thank you for
+                                joining us on this journey at the Digital Fest. Let's challenge your mind with AHN Mind
+                                Games!</p>
+                        <p>Welcome to the world of endless fun and excitement! Here, you'll discover a vast array of
+                                games that cater to every taste and preference. Whether you're a casual gamer seeking
+                                lighthearted entertainment or a hardcore enthusiast craving adrenaline-pumping
+                                challenges, you'll find something to ignite your passion.</p>
+                        <p>Immerse yourself in captivating storylines, explore breathtaking virtual worlds, and engage
+                                in thrilling multiplayer battles with friends and rivals from around the globe.</p>
+                        <p>Join us on this extraordinary journey and unlock the boundless potential of gaming. Embark on
+                                unforgettable adventures, forge lasting friendships, and create memories that will stay
+                                with you forever.</p>
+                </div>
+        </div>
+
+        <div class="games-section" id="gamesSection">
+                <h2>Our Games</h2>
+                <div class="game-card">
+                        <h3>Tic Tac Toe</h3>
+                        <p>In this game there will be 2 people x and o and you will have to make the thing in a row</p>
+                        <li><a href="https://99lmsfileuploadfolder.s3.ap-south-1.amazonaws.com/uploaded/IDEFiles/5d174a679fd9fad4f718cc5b/670d3e6ff5af00c6ae8d482f/index.html?v=1730902582650">Play
+                                        Tic Tac Toe</a></li>
+                </div>
+                <div class="game-card">
+                        <h3>Flappybird</h3>
+                        <p>In this game you have to make the bird go through the pipes as you do this your score will
+                                increase.</p>
+                        <li><a href="https://99lmsfileuploadfolder.s3.ap-south-1.amazonaws.com/uploaded/IDEFiles/5d174a679fd9fad4f718cc5b/670e5ca0eeeb427e55abe411/flappy.html?v=1730902823144">Play Flappybird</a></li>
+                </div>
+                <div class="game-card">
+                        <h3>Wordle</h3>
+                        <p>In this game you have to type different words to find the Ai chose but you will only have 6 chances.</p>
+                        <li><a href="https://99lmsfileuploadfolder.s3.ap-south-1.amazonaws.com/uploaded/IDEFiles/5d174a679fd9fad4f718cc5b/670d427ec706870853cbb3a8/Index.html?v=1730903678918">Play Wordle</a></li>
+                </div>
+                <div class="game-card">
+                        <h3>India Quiz</h3>
+                        <p>In this game Ai will ask some questions on India.There are a total of 5 questions after two rounds it will stop.</p>
+                       <li> <a href="https://99lmsfileuploadfolder.s3.ap-south-1.amazonaws.com/uploaded/IDEFiles/5d174a679fd9fad4f718cc5b/67190ba7ebee5b0a5835df17/index.html?v=1730904402934">Play Quiz</a></li>
+                </div>
+                <div class="game-card">
+                         <h3>Hangman</h3>
+                        <p>Here we should guess letters and find the word.There will be a person,after the person is drawn full that means your chances are finished.</p>
+                 <li><a href="https://99lmsfileuploadfolder.s3.ap-south-1.amazonaws.com/uploaded/IDEFiles/5d174a679fd9fad4f718cc5b/670d3d71c706870853cbb39a/Hangman.html?v=1730904193760">Play Hangman</a></li>
+                <!-- Add more games as needed -->
+        </div>
+
+        <script>
+                function toggleAbout() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    const aboutContent = document.querySelector('.about-content');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                aboutContent.classList.toggle('show');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            aboutContent.style.display = aboutContent.style.display === 'block' ? 'none' : 'block';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            function toggleGames() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const gamesSection = document.getElementById('gamesSection');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    gamesSection.style.display = gamesSection.style.display === 'block' ? 'none' : 'block';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+        </script>
+
+</body>
+
+</html>
